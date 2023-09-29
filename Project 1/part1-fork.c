@@ -5,6 +5,7 @@
 int main(int argc, char *argv[]) {
     printf("hello world (pid:%d)\n", (int) getpid());
     int x = 100;
+    printf("x initial (x:%d)\n", x);
     int rc = fork();
     
     if (rc < 0) {
@@ -25,5 +26,6 @@ int main(int argc, char *argv[]) {
         printf("hello, I am parent of %d (pid:%d)\n",
         rc, (int) getpid());
     }
+    printf("x final (x:%d)\n", x);
     return 0;
 }
