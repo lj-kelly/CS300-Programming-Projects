@@ -18,7 +18,7 @@ int main(int argc, char *argv[]) {
         //PART 1- CHILD DOES NOT CHANGE X
         //x = 101;
         //PART 2- CHILD DOES CHANGE X
-        //x = 101;
+        x = 101;
         printf("child (x:%d)\n", x);
         printf("hello, I am child (pid:%d)\n", (int) getpid());
     } 
@@ -27,7 +27,7 @@ int main(int argc, char *argv[]) {
         //PART 1- PARENT DOES NOT CHANGE X
         //x = 102;
         //PART 2- PARENT DOES CHANGE X
-        //x = 102;
+        x = 102;
         printf("parent (x:%d)\n", x);
         printf("hello, I am parent of %d (pid:%d)\n",
         rc, (int) getpid());
