@@ -13,12 +13,8 @@ int main(int argc, char *argv[]) {
   } 
   else if (rc == 0) { // child (new process)
     printf("hello, I am child (pid:%d)\n", (int) getpid());
-    char *myargs[3];
-    myargs[0] = strdup("wc"); // program: "wc" (word count)
-    myargs[1] = strdup("p3.c"); // argument: file to count
-    myargs[2] = NULL; // marks end of array
-    execvp(myargs[0], myargs); // runs word count
-    printf("this shouldn’t print out");
+    execl('/bin/ls', 'ls', '-1', NULL); // runs word count
+    printf("this shouldn't print out");
   }
   else { // parent goes down this path (main)
     int rc_wait = wait(NULL);
