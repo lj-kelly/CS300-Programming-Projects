@@ -13,7 +13,7 @@ int main(int argc, char *argv[]) {
   } 
   else if (rc == 0) { // child (new process)
     printf("hello, I am child (pid:%d)\n", (int) getpid());
-    execl('/bin/ls', 'ls', '-1', NULL); // runs word count
+    execl("/bin/ls", "ls", "-1", NULL); // runs word count
     printf("this shouldn't print out");
   }
   else { // parent goes down this path (main)
