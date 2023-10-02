@@ -13,7 +13,7 @@ int main(int argc, char *argv[]) {
   else if (rc == 0) { // child (new process)
     
     int rc_wait = wait(NULL);
-    //int rc_wait = waitpid(NULL);
+    //int rc_wait = waitpid(rc, NULL, 0);
     printf("hello, I am child of %d (rc_wait:%d) (pid:%d)\n", rc, rc_wait, (int) getpid());
     
     
