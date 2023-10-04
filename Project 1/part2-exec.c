@@ -19,7 +19,7 @@ int main(int argc, char *argv[]) {
     //execlp("ls", "ls", "-1", NULL); // execlp call  (part 2c)
     //execv("/bin/ls", argv); // execv call (part 2d)
     //execvp("ls", argv); // execvp call (part 2e)
-    //execvpe("ls", argv, NULL); // execvpe call (part 2f) not working currently
+    execvpe("ls", argv, NULL); // execvpe call (part 2f) not working currently
     printf("this shouldn't print out");
   }
   else { // parent goes down this path (main)
